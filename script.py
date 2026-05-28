@@ -8,7 +8,7 @@ class inhandCalculator :
         self.gross_income = basic + allowance
         self.new_regime_tax_calculation(self.gross_income - er_nps)
         self.gratuity = 0.0481*basic
-        self.monthly_takehome = (self.gross_income - self.total_tax - er_epf * 2 - er_nps) / 12
+        self.monthly_takehome = (self.gross_income - self.total_tax - er_epf - er_nps) / 12
         self.annual_epf = er_epf
         self.annual_nps = er_nps
         self.ctc = self.gross_income + self.annual_epf + self.gratuity*gratuity

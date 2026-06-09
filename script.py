@@ -66,6 +66,8 @@ annual_epf = st.number_input("Employee EPF Contribution (₹ / year)", min_value
 # ON / OFF switch
 feature_on = st.toggle("Enable Employer NPS Benefit (14% of Basic)")
 annual_nps = 0.14*annual_basic*feature_on
+nps_rate = st.slider("Employer NPS Contribution (%)", min_value=0.0, max_value=14.0, value=0.0, step=1.0)
+annual_nps = nps_rate*annual_basic
 
 feature_on = st.toggle("Add Gratuity into CTC")
 
